@@ -1,4 +1,5 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
+import Loading from "../../islands/Loading.tsx";
 
 interface User {
   login: string;
@@ -28,6 +29,7 @@ export default function GithubPage({ data }: PageProps<User | null>) {
       <img src={data.avatar_url} width={64} height={64} />
       <h1>{data.name}</h1>
       <p>{data.name}</p>
+      <Loading />
     </div>
   );
 }
